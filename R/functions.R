@@ -38,6 +38,11 @@ CCT.complete <- function(link){
   return(CCT)
 }
 
+CCT.generate_file_name <- function(sind, df, row_chos){
+  return(paste0(sind, "_", row.names(df)[row_chos], ".csv"))
+}
+
+
 # Wrangling
 
 CCT.get_monetary_values <- function(vec){
