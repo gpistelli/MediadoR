@@ -7,7 +7,11 @@ A proto-package (still in development) to organize researches on [MTE's Mediador
 
 For now, I still haven't got time to submit this package to CRAN, which demands an extensive review of our code, so we're focusing in launching it to tests here in Github.
 
-If you want to test this package, feel free to fork this repository and use our code.
+Our package can be acessed with devtools:
+
+``` r
+devtools::install_github("gpistelli/MediadoR", subdir = "pkg")
+```
 
 ## Aims and objectives
 
@@ -30,7 +34,7 @@ For now, we're still working on storing data and creating basic functions that c
 
 So, for this time, if you use our code to extract any data, just storing it in our repo would be a great help. Just be careful to follow our folder structure, uploading it to:
 
-data/[type of collective bargaining]/[Main city]/[Workers category]/[Workers Union]/[year]/[union_year].csv
+data/[type of collective bargaining]/[Main city]/[Workers category]/[Workers Union]/[union_negot_year].csv
 
 Following this pattern will help us to develop functions that will reach directly to our repo, going faster and cleaner than webscraping data from the Mediador system.
 
