@@ -8,6 +8,7 @@
 #' NCT_get_NCT("http://www3.mte.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR039775/2018")
 #' NCT_get_NCT("SENGE_SICEPOT_2018.html")
 #'
+#' @import magrittr
 #' @export
 NCT_get_NCT <- function(path){
   NCT <- rvest::read_html(path, encoding = "utf8") %>% rvest::html_nodes("b , p") %>% rvest::html_text()
@@ -118,6 +119,8 @@ return(vec)
 #' @examples
 #' NCT_convert_mon_to_num("R$ 1.233,50")
 #'
+#'
+#' @import magrittr
 #' @export
 NCT_convert_mon_to_num <- function(vec){
   gsub(pattern = "R\\$", replacement = "", x = vec) %>% gsub("\\.|[[:blank:]]", "", .) %>% gsub(",", "\\.", .) %>%
@@ -148,6 +151,7 @@ return(vec)
 #' @examples
 #' NCT_convert_perct_to_num("5%")
 #'
+#' @import magrittr
 #' @export
 NCT_convert_perct_to_num <- function(vec){
   vec <- gsub(",", "\\.", vec) %>% gsub("[[:blank:]]|%", "", .) %>%
@@ -183,6 +187,7 @@ NCT_generate_ggplot2_df <- function(obj_name, vec){
 #' @param A data.frame containing columns with NA, representing articles that were added or taken out
 #' @return A named character vector with these articles conditions
 #'
+#' @import magrittr
 #' @export
 NCT_find_nold_clauses <- function(df){
 nold_clauses <- unlist(lapply(X = lapply(X = df[1:ncol(df)], FUN = is.na), any))

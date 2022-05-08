@@ -19,4 +19,5 @@ Takes "." as a filler and changes "," into "." to represent decimals.
 \examples{
 NCT_convert_mon_to_num("R$ 1.233,50")
 
+
 }
