@@ -26,7 +26,7 @@ We intend to:
 - Develop new folders, keeping both raw and aggregated data
 - Create new tools to automate our data wrangling and analysis
 
-Some examples will be available in our vignettes, which are soon coming up here.
+You can find a basic introduction to what our package offer right now in our project page: <https://gpistelli.github.io/MediadoR/> 
 
 ### How can I help?
 
@@ -40,15 +40,18 @@ Following this pattern will help us to develop functions that will reach directl
 
 If you've got any new data type to store (like wage means per year, types of clauses for each category, etc.), contact this repository authors so that we can, together, find a practical and clear way of structuring our folders.
 
-Also, if you've got any function that you've been using repeatedly and thinks that it would be a good tool to share, reach to us. We're looking forward to have new authors for this package!
+Also, if you've got any function that you've been using repeatedly and thinks that it would be a good tool to share, reach to us. We're looking forward to have new contributors for this package!
 
 ### Bugs and questions
 
-We're still working on a vignette and documentation, so if you've found any bug or does have any question, you can reach me here or through my email (see my profile to find my contacts)
+If you've found any bug or does have any question, you can reach me here or through my email (see my profile to find my contacts)
 
 ## References
 
-RVEST.
-DIEESE.
-MEDIADOR.
+DIEESE. Cesta básica de alimentos. Available at: <http://www.dieese.org.br/cesta/>.
 
+MTE. Sistema Mediador. 1997. Available at: <http://www3.mte.gov.br/sistemas/mediador/Home>.
+
+WICKHAM, Hadley. rvest: Easily Harvest (Scrape) Web Pages. R package version 0.3.6. 2020. Available at: <https://CRAN.R-project.org/package=rvest>.
+
+_____; et al. Welcome to the tidyverse. Journal of Open Source Software, 4(43), 1686, 2019
