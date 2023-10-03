@@ -12,7 +12,7 @@
 #' @export
 NCT_get_NCT <- function(path){
   NCT <- rvest::read_html(path, encoding = "utf8") %>% rvest::html_nodes("b , p") %>% rvest::html_text()
-  NCT <- gsub("\r\n", "", NCT)
+  NCT <- gsub("\r|\n", "", NCT)
   NCT <- gsub("  ", "", NCT)
   return(NCT)
 }
