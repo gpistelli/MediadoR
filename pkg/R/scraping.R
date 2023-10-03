@@ -106,7 +106,14 @@ NCT_generate_file_name <- function(sind, negot, df, row_chos){
 #' @export
 NCT_get_monetary_values <- function(vec){
 vec  <- stringr::str_extract_all(pattern = "R\\$(.+?)[[:blank:]]", string = vec)
-return(stringr::str_trim(vec))
+
+if (length(vec) > 1){
+  vec <- unlist(lapply(vec, stringr::str_trim))
+} else {
+  vec <- stringr::str_trim(vec)
+}
+
+return(vec)
 }
 
 #' Convert monetary value to numeric
@@ -139,7 +146,14 @@ NCT_convert_mon_to_num <- function(vec){
 #' @export
 NCT_get_percent_value <- function(vec){
   vec  <- stringr::str_extract_all(string = vec, pattern = "([[:digit:]]+)([[:punct:]]*)([[:digit:]]*)%")
-return(stringr::str_trim(vec))
+
+  if (length(vec) > 1){
+  vec <- unlist(lapply(vec, stringr::str_trim))
+  } else {
+    vec <- stringr::str_trim(vec)
+  }
+
+return(vec)
 }
 
 #' Converts percentages to numeric
