@@ -198,4 +198,3 @@ vec <- ifelse(vec == TRUE, "Retirado", "Novo")
 
 return(vec)
 }
-
