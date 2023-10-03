@@ -139,7 +139,7 @@ NCT_convert_mon_to_num <- function(vec){
 #' @export
 NCT_get_percent_value <- function(vec){
   vec  <- stringr::str_extract_all(string = vec, pattern = "([[:digit:]]+)([[:punct:]]*)([[:digit:]]*)%")
-return(stringr::srt_trim(vec))
+return(stringr::str_trim(vec))
 }
 
 #' Converts percentages to numeric
